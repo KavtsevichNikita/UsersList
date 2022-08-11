@@ -24,12 +24,10 @@ function ExpenseForm({ onSaveExpenseData, onCancel }) {
 
         const expenseData = {
           title: enteredTitle,
-          amaunt: enteredAmount,
+          amount: enteredAmount,
           date: new Date(enteredDate)
         };
-
         onSaveExpenseData(expenseData)
-        console.log(enteredAmount);
         setEnteredTitle('')
         setEnteredAmount()
         setEnteredDate('')
@@ -60,7 +58,7 @@ function ExpenseForm({ onSaveExpenseData, onCancel }) {
           <label>Date</label>
           <input
             type="date"
-            min="2019-01-01"
+            min="1900-01-01"
             value={enteredDate}
             onChange={dateChangeHandler}
           />
